@@ -36,7 +36,7 @@ class ApplicationPolicy
     false
   end
 
-  def user_is_owner_of_record_or_admin?
-    user == record.owned_by || user.admin?
+  def user_is_owner_of_record?
+    user == record.owned_by
   end
 end

@@ -5,5 +5,4 @@ class Profile < ApplicationRecord
 
   validates :first_name, presence: true, length: { minimum: 3, maximum: 255 }, on: :update
   validates :last_name, presence: true, length: { minimum: 3, maximum: 255 }, on: :update
-  validates :phone, length: { minimum: 3, maximum: 25 }, on: :update
 end

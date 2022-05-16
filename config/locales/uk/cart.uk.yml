@@ -1,8 +1,0 @@
-uk:
-  carts:
-    empty_title: "У Вашому Кошику Поки Немає Книжок"
-    order_title: "Готові Придбати?"
-    total_price: "Загальна Вартість"
-    create_order: "Оформити Замовлення"
-  shelves:
-    empty_title: "На Вашій Полиці Поки Немає Книжок"

@@ -11,7 +11,5 @@
       .field.mb-4
         = f.input :last_name, placeholder: t('profiles.form.last_name_placeholder')
       .field.mb-4
-        = f.input :phone, placeholder: t('profiles.form.phone_placeholder')
-      .field.mb-4
         = f.input :birthday, start_year: Date.today.year - 110, end_year: Date.today.year, placeholder: t('profiles.form.birthday_placeholder')
       = f.submit t('global.forms.submit'), class:"btn border-brown animated-shadow font-weight-bold w-100"

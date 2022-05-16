@@ -1,6 +1,6 @@
 navbar.wrapper.shadow.border-right-brown
   .navbar.d-flex.justify-content-center
-    btn.border-brown.font-weight-bold.mx-2.p-2 = t("sidebar.#{current_user.role}_logo") 
+    btn.border-brown.font-weight-bold.mx-2.p-2 = t("sidebar.logo") 
   ul.nav.d-flex.flex-column.p-2
     li = link_to current_user.profile, class: "font-weight-bold nav-item btn border-brown animated-shadow d-flex justify-content-between mb-2" do
       span = t('sidebar.profile')
@@ -8,12 +8,9 @@ navbar.wrapper.shadow.border-right-brown
     li = link_to books_path, class: "font-weight-bold nav-item btn border-brown animated-shadow d-flex justify-content-between mb-2" do
       span = t('sidebar.books')
       i.bi.bi-book-half
-    li = link_to current_user.cart, class: "font-weight-bold nav-item btn border-brown animated-shadow d-flex justify-content-between mb-2" do
-      span = t('sidebar.cart')
-      i.bi.bi-basket3-fill
-    li = link_to current_user.shelf, class: "font-weight-bold nav-item btn border-brown animated-shadow d-flex justify-content-between mb-2" do
-      span = t('sidebar.shelf')
-      i.bi.bi-bookshelf
+    li = link_to categories_path, class: "font-weight-bold nav-item btn border-brown animated-shadow d-flex justify-content-between mb-2" do
+      span = t('sidebar.categories')
+      i.bi.bi-bookmark-fill
   .spacer
   .profile.p-2
     .btn-group.dropup.d-flex.justify-content-between.animated-shadow

@@ -10,7 +10,6 @@ en:
         title: "Title"
         author: "Author"
         description: "Description"
-        price: "Price"
         categories: "Categories"
         publishing_house: "Publishing House"
         publishing_date: "Publishing Date"
@@ -21,8 +20,3 @@ en:
         last_name: "Last Name"
         phone: "Phone"
         birthday: "Birthday"
-      line_item:
-        price: "Price"
-      order:
-        first_name: "First Name"
-        last_name: "Last Name"

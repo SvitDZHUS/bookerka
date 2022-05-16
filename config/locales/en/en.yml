@@ -14,18 +14,14 @@ en:
     sign_up: "Sign Up"
     sign_out: "Sign Out"
   sidebar:
-    admin_logo: "BOOKER.ka | ADMIN"
-    member_logo: "BOOKER.ka | MEMBER"
+    logo: "BOOKER.ka"
     profile: "Profile"
     categories: "Categories"
-    users: "Users"
     books: "Books"
-    cart: "Cart"
-    shelf: "Shelf"
   welcome_pages:
     welcome: 
       title: "Welcome to BOOKER.ka"
-      subtitle: "Find books, buy books, manage books. Everything in one place!"
+      subtitle: "Let's make a great library together!"
       latest_books: "The Latest Books"
   date:
     formats:

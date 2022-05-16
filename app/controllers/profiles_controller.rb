@@ -24,6 +24,6 @@ class ProfilesController < DashboardController
   end
 
   def profile_params
-    params.require(:profile).permit(:first_name, :last_name, :phone, :birthday)
+    params.require(:profile).permit(:first_name, :last_name, :birthday)
   end
 end

@@ -1,8 +1,0 @@
-uk:
-  line_items:
-    controller:
-      add_item_to_cart: "Книжку додано до кошика"
-      remove_item_from_cart: "Книжку видалено з кошика"
-    actions:
-      add_to_cart: "Додати у Кошик"
-      remove_from_cart: "Видалити з Кошика"

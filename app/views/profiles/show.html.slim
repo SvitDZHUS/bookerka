@@ -4,9 +4,6 @@
     - if @profile.first_name
       h1.display-3.text-center.border-bottom-brown.mb-4.pb-4 = "#{@profile.first_name} #{@profile.last_name}"
       p 
-        strong = t('.phone')
-        =< @profile.phone
-      p 
         strong = t('.birthday')
         =< @profile.birthday
       =< link_to edit_profile_path(@profile), class:"mx-2 btn border-brown animated-shadow", title: t('.edit') do

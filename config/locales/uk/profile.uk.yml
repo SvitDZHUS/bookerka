@@ -3,7 +3,6 @@ uk:
     show:
       first_name: "Ім'я:"
       last_name: "Прізвище:"
-      phone: "Номер Телефону:"
       birthday: "Дата Народження:"
       edit: "Редагувати"
       fill_in_profile: "Заповніть свій профіль"
@@ -14,5 +13,4 @@ uk:
     form:
       first_name_placeholder: "Введіть Ваше ім'я"
       last_name_placeholder: "Введіть Ваше прізвище"
-      phone_placeholder: "Введіть Ваш номер телефону"
       birthday_placeholder: "Введіть Вашу дату народження"

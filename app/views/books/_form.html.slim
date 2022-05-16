@@ -1,4 +1,4 @@
-= simple_form_for([:admin, @book]) do |f|
+= simple_form_for(@book) do |f|
   .field.mb-4
     = f.input :title, placeholder: t('books.form.title_placeholder')
   .field.mb-4
@@ -9,8 +9,6 @@
     .d-flex.flex-column.mt-1
       = f.association :categories, as: :check_boxes, label_method: :category_name, value_method: :id, include_blank: false, collection: @categories, wrapper: :vertical_collection_inline 
   .field.mb-4
-    = f.input :price, placeholder: t('books.form.price_placeholder')
-  .field.mb-4
     = f.input :publishing_house, placeholder: t('books.form.publishing_house_placeholder')
   .field.mb-4
     = f.input :publishing_date, start_year: 990.years.ago.year, placeholder: t('books.form.publishing_date_placeholder')
@@ -20,4 +18,8 @@
     = f.label :cover
     .d-flex.mt-1
       = f.file_field :cover, class: "custom-file-input"
+  .field.mb-4.border-brown.p-3
+    = f.label :book
+    .d-flex.mt-1
+      = f.file_field :book, class: "custom-file-input"
   = f.submit t('global.forms.submit'), class:"btn border-brown animated-shadow font-weight-bold w-100"

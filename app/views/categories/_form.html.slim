@@ -1,0 +1,4 @@
+= simple_form_for(@category) do |f|
+  .field.mb-4
+    = f.input :category_name, placeholder: t('categories.form.category_name_placeholder')
+  = f.submit t('global.forms.submit'), class: 'btn border-brown animated-shadow font-weight-bold w-100'

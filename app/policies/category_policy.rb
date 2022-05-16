@@ -6,22 +6,22 @@ class CategoryPolicy < ApplicationPolicy
   end
 
   def create?
-    user.admin?
+    true
   end
 
   def new?
-    create?
+    true
   end
 
   def update?
-    user.admin?
+    true
   end
 
   def edit?
-    update?
+    true
   end
 
   def destroy?
-    user.admin?
+    true
   end
 end

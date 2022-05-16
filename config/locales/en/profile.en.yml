@@ -14,5 +14,4 @@ en:
     form:
       first_name_placeholder: "Write your first name"
       last_name_placeholder: "Write your last name"
-      phone_placeholder: "Write your phone"
       birthday_placeholder: "Write your birthday"

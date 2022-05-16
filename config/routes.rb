@@ -8,12 +8,8 @@ Rails.application.routes.draw do
 
   # root 'welcome_pages#welcome'
   devise_scope :user do
-    authenticated :user, ->(u) { u.role == 'admin' } do
-      root to: 'admin/books#index', as: :admin_root
-    end
-
-    authenticated :user, ->(u) { u.role == 'member' } do
-      root to: 'books#index', as: :member_root
+    authenticated  do
+      root to: 'books#index', as: :authenticated_root
     end
 
     unauthenticated do
@@ -23,22 +19,9 @@ Rails.application.routes.draw do
   end
 
   get 'welcome', to: 'welcome_pages#welcome', as: :welcome
+  get 'download', to: 'books#download', as: :download
 
-  resources :orders, only: :new
-  post :create_order, to: 'orders#create_order'
-  post :capture_order, to: 'orders#capture_order'
-
-  resources :line_items, only: %i[destroy]
-  post :add_item_to_cart, to: 'line_items#add_item_to_cart'
-
-  resources :books, only: %i[index show]
-  resources :carts, only: %i[show]
-  resources :shelves, only: %i[show]
   resources :profiles, only: %i[show edit update]
-
-  namespace :admin do
-    resources :users, only: %i[index show]
-    resources :categories
-    resources :books
-  end
+  resources :categories
+  resources :books
 end

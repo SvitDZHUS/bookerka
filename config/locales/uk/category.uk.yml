@@ -1,19 +1,18 @@
 uk:
-  admin:
-    categories:
-      title: "Категорії"
-      index:
-        name: "Назва Категорії"
-        new_category: "Нова Категорія"
-        edit: "Редагувати"
-        destroy: "Видалити"
-      new:
-        title: "Нова Категорія"
-      edit:
-        title: "Редагувати Категорію"
-      controller:
-        create: "Категорію успішно створено"
-        update: "Категорію успішно оновлено"
-        destroy: "Категорію успішно видалено"
-      form:
-        category_name_placeholder: "Введіть назву категорії"
+  categories:
+    title: "Категорії"
+    index:
+      name: "Назва Категорії"
+      new_category: "Нова Категорія"
+      edit: "Редагувати"
+      destroy: "Видалити"
+    new:
+      title: "Нова Категорія"
+    edit:
+      title: "Редагувати Категорію"
+    controller:
+      create: "Категорію успішно створено"
+      update: "Категорію успішно оновлено"
+      destroy: "Категорію успішно видалено"
+    form:
+      category_name_placeholder: "Введіть назву категорії"

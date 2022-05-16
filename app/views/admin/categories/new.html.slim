@@ -1,8 +1,0 @@
-= render 'shared/banner'
-.container.d-flex.justify-content-center
-  .col-6.d-flex.flex-column.align-items-stretch
-    = link_to admin_categories_path, class: 'border-brown animated-shadow btn font-weight-bold align-self-start mb-4' do 
-      i.bi.bi-caret-left
-      = t('global.back')
-    h1.display-3.text-center.border-bottom-brown.mb-4.pb-4 = t('admin.categories.new.title')
-    = render 'admin/categories/form'

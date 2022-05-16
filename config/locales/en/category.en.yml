@@ -1,19 +1,18 @@
 en:
-  admin:
-    categories:
-      title: "Categories"
-      index:
-        name: "Category Name"
-        new_category: "New Category"
-        edit: "Edit"
-        destroy: "Destroy"
-      new:
-        title: "New Category"
-      edit:
-        title: "Edit Category"
-      controller:
-        create: "Category was successfully created"
-        update: "Category was successfully updated"
-        destroy: "Category was successfully deleted"
-      form:
-        category_name_placeholder: "Write name of category"
+  categories:
+    title: "Categories"
+    index:
+      name: "Category Name"
+      new_category: "New Category"
+      edit: "Edit"
+      destroy: "Destroy"
+    new:
+      title: "New Category"
+    edit:
+      title: "Edit Category"
+    controller:
+      create: "Category was successfully created"
+      update: "Category was successfully updated"
+      destroy: "Category was successfully deleted"
+    form:
+      category_name_placeholder: "Write name of category"

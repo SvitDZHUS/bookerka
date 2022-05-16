@@ -2,11 +2,10 @@
 
 require 'factory_bot_rails'
 
-# Create admin and member users.
+# Create user.
 
 FactoryBot.create(:user)
-FactoryBot.create(:user, :admin)
-Rails.logger.info 'Created admin and member users'
+Rails.logger.info 'Created user'
 
 # Create categories.
 

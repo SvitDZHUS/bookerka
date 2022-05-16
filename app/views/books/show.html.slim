@@ -22,10 +22,6 @@
           - @book.categories.each do |category|
             li =< category.category_name
       p 
-        strong = t('.price')
-        =< @book.price
-        =< I18n.t('.usd')
-      p 
         strong = t('.publishing_house')
         =< @book.publishing_house
       p 
@@ -34,11 +30,11 @@
       p 
         strong = t('.language')
         =< @book.language
-      - if current_user.admin?
-        =< link_to edit_admin_book_path(@book), class:"mx-2 btn border-brown animated-shadow", title: t('.edit') do
+      .d-flex.justify-content-end.border-top-brown.p-4
+        =< link_to @book.book
+        =< link_to edit_book_path(@book), class:"mx-2 btn border-brown animated-shadow", title: t('.edit') do
           i.bi.bi-pencil-square
-          =< t('.edit')
-      - else 
-        =< button_to add_item_to_cart_path(book_id: @book), class:"mx-2 btn border-brown animated-shadow", method: :post do 
-          i.bi.bi-basket3-fill
-          strong =< t('line_items.create.add_to_cart')
+          =< t('books.show.edit')
+        =< button_to book_path(@book), form: { data: { turbo_confirm: t('global.forms.confirm') } }, class:"mx-2 btn border-brown animated-shadow", title: t('global.destroy'), method: :delete do
+          i.bi.bi-trash
+          =< t('global.destroy')

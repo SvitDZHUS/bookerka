@@ -5,10 +5,10 @@ class CreateBooks < ActiveRecord::Migration[7.0]
     create_table :books do |t|
       t.string :title
       t.text :description
-      t.decimal :price
       t.string :publishing_house
       t.date :publishing_date
       t.string :cover
+      t.string :book
       t.string :language
 
       t.timestamps

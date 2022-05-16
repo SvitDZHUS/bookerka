@@ -2,15 +2,14 @@
 .container
   .row.d-flex.justify-content-center
     - @books.each do |book|
-      .col-5.row.border-brown.p-4.m-2
+      .col-5.row.border-brown.p-2.m-2
         .cover.col-4
           = image_tag book.cover.url(:small)
-        .info.col-8
-          h3 = book.title 
+        .info.col-8.p-2
+          h1.display-6.border-bottom-brown = book.title 
           p.lead = book.author 
-          p 
-            =< book.price
-            =< I18n.t('.usd')
           .d-flex.justify-content-end
-            =< link_to book, class:"mx-2 btn border-brown animated-shadow", title: t('.edit') do
+            =< link_to book_path(book), class:"mx-2 btn border-brown animated-shadow", title: t('.edit') do
               i.bi.bi-eye
+  .d-flex.justify-content-center
+    = link_to t('.new_book'), new_book_path, class:"btn border-brown animated-shadow font-weight-bold w-50"

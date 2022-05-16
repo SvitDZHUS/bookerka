@@ -14,18 +14,14 @@ uk:
     sign_up: "Зареєструватись"
     sign_out: "Вийти"
   sidebar:
-    admin_logo: "BOOKER.ka | ADMIN"
-    member_logo: "BOOKER.ka | MEMBER"
+    logo: "BOOKER.ka"
     profile: "Профіль"
     categories: "Категорії"
-    users: "Користувачі"
     books: "Книги"
-    cart: "Кошик"
-    shelf: "Полиця"
   welcome_pages:
     welcome: 
       title: "Вітаємо у BOOKER.ka"
-      subtitle: "Шукайте книги, купуйте книги, читайте книги. Усе в одному місці!"
+      subtitle: "Створюємо велику бібліотеку разом!"
       latest_books: "Найновіші Книжки"
   date:
     formats:

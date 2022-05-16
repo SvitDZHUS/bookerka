@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Categories', type: :request do
-  let(:user) { create(:user, :admin) }
+  let(:user) { create(:user) }
 
   before do
     sign_in(user)
@@ -15,14 +15,14 @@ RSpec.describe 'Categories', type: :request do
 
   describe 'GET /index' do
     it 'renders a successful response' do
-      get admin_categories_url
+      get categories_url
       expect(response).to be_successful
     end
   end
 
   describe 'GET /new' do
     it 'renders a successful response' do
-      get new_admin_category_url
+      get new_category_url
       expect(response).to render_template(:new)
     end
   end
@@ -31,7 +31,7 @@ RSpec.describe 'Categories', type: :request do
     let(:valid_category) { create(:category) }
 
     it 'render a successful response' do
-      get edit_admin_category_url(valid_category)
+      get edit_category_url(valid_category)
       expect(response).to render_template(:edit)
     end
   end
@@ -41,8 +41,8 @@ RSpec.describe 'Categories', type: :request do
       let(:valid_category) { attributes_for(:category) }
 
       it 'creates a new category' do
-        post admin_categories_url, params: { category: valid_category }
-        expect(response).to redirect_to admin_categories_url
+        post categories_url, params: { category: valid_category }
+        expect(response).to redirect_to categories_url
         follow_redirect!
         expect(response).to render_template(:index)
         expect(response.body).to include('Category was successfully created')
@@ -53,9 +53,9 @@ RSpec.describe 'Categories', type: :request do
       let(:invalid_category) { attributes_for(:category, :invalid_category) }
 
       it "renders a successful response (i.e. to display the 'new' template)" do
-        get new_admin_category_url
+        get new_category_url
         expect(response).to render_template(:new)
-        post admin_categories_url, params: { category: invalid_category }
+        post categories_url, params: { category: invalid_category }
         expect(response).to render_template(:new)
       end
     end
@@ -67,10 +67,10 @@ RSpec.describe 'Categories', type: :request do
       let(:edited_category) { attributes_for(:category) }
 
       it 'updates the requested category' do
-        get edit_admin_category_url(valid_category)
+        get edit_category_url(valid_category)
         expect(response).to render_template(:edit)
-        patch admin_category_url(valid_category), params: { category: edited_category }
-        expect(response).to redirect_to(admin_categories_url)
+        patch category_url(valid_category), params: { category: edited_category }
+        expect(response).to redirect_to(categories_url)
         follow_redirect!
         expect(response.body).to include('Category was successfully updated')
       end
@@ -81,9 +81,9 @@ RSpec.describe 'Categories', type: :request do
       let(:edited_invalid_category) { attributes_for(:category, :invalid_category) }
 
       it "renders a successful response (i.e. to display the 'edit' template)" do
-        get edit_admin_category_url(valid_category)
+        get edit_category_url(valid_category)
         expect(response).to render_template(:edit)
-        patch admin_category_url(valid_category), params: { category: edited_invalid_category }
+        patch category_url(valid_category), params: { category: edited_invalid_category }
         expect(response).to render_template(:edit)
       end
     end
@@ -93,12 +93,12 @@ RSpec.describe 'Categories', type: :request do
     let!(:valid_category) { create(:category) }
 
     it 'destroys the requested category' do
-      expect { delete admin_category_url(valid_category) }.to change(Category, :count).by(-1)
+      expect { delete category_url(valid_category) }.to change(Category, :count).by(-1)
     end
 
     it 'redirects to the categories list' do
-      delete admin_category_url(valid_category)
-      expect(response).to redirect_to(admin_categories_url)
+      delete category_url(valid_category)
+      expect(response).to redirect_to(categories_url)
     end
   end
 end
